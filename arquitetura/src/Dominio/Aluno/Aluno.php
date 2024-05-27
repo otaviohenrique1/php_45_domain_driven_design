@@ -4,6 +4,7 @@ namespace Alura\Arquitetura\Dominio\Aluno;
 
 use Alura\Arquitetura\Dominio\CPF;
 use Alura\Arquitetura\Dominio\Email;
+use DomainException;
 
 class Aluno
 {
@@ -31,6 +32,9 @@ class Aluno
 
   public function adicionarTelefone(string $ddd, string $numero): self
   {
+    if (count($this->telefones) === 2) {
+      throw new DomainException('Aluno já tem 2 telefones. Não pode adicionar outro');
+    }
     $this->telefones[] = new Telefone($ddd, $numero);
     return $this;
   }
