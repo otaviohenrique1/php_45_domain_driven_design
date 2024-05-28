@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Arquitetura\Testes\Aplicacao\Aluno;
+namespace Alura\Arquitetura\Testes\Academico\Aplicacao\Aluno;
 
 use Alura\Arquitetura\Academico\Aplicacao\Aluno\MatricularAluno\MatricularAluno;
 use Alura\Arquitetura\Academico\Aplicacao\Aluno\MatricularAluno\MatricularAlunoDto;

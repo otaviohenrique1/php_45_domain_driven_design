@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Arquitetura\Testes\Dominio;
+namespace Alura\Arquitetura\Testes\Academico\Dominio;
 
 use Alura\Arquitetura\Academico\Dominio\Email;
 use InvalidArgumentException;

@@ -2,8 +2,8 @@
 
 namespace Alura\Arquitetura\Academico\Dominio\Aluno;
 
+use Alura\Arquitetura\Academico\Shared\Dominio\Evento\Evento;
 use Alura\Arquitetura\Shared\Dominio\CPF;
-use Alura\Arquitetura\Academico\Dominio\Evento;
 use DateTimeImmutable;
 
 class AlunoMatriculado implements Evento
@@ -24,5 +24,10 @@ class AlunoMatriculado implements Evento
   public function momento(): DateTimeImmutable
   {
     return $this->momento;
+  }
+
+  public function jsonSerialize()
+  {
+    get_object_vars($this);
   }
 }

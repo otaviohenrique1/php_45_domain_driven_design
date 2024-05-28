@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Arquitetura\Testes\Dominio;
+namespace Alura\Arquitetura\Testes\Shared\Dominio;
 
 use Alura\Arquitetura\Shared\Dominio\CPF;
 use InvalidArgumentException;

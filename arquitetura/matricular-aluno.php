@@ -1,11 +1,12 @@
 <?php
 
-use Alura\Arquitetura\Aplicacao\Aluno\MatricularAluno\MatricularAluno;
-use Alura\Arquitetura\Aplicacao\Aluno\MatricularAluno\MatricularAlunoDto;
-use Alura\Arquitetura\Dominio\Aluno\Aluno;
-use Alura\Arquitetura\Dominio\Aluno\LogDeAlunoMatriculado;
-use Alura\Arquitetura\Dominio\PublicadorDeEvento;
-use Alura\Arquitetura\Infra\Aluno\RepositorioDeAlunoEmMemoria;
+use Alura\Arquitetura\Academico\Aplicacao\Aluno\MatricularAluno\MatricularAluno;
+use Alura\Arquitetura\Academico\Aplicacao\Aluno\MatricularAluno\MatricularAlunoDto;
+use Alura\Arquitetura\Academico\Dominio\Aluno\LogDeAlunoMatriculado;
+use Alura\Arquitetura\Academico\Infra\Aluno\RepositorioDeAlunoEmMemoria;
+use Alura\Arquitetura\Academico\Shared\Dominio\Evento\PublicadorDeEvento;
+use Alura\Arquitetura\Gameficacao\Aplicacao\GeraSeloDeNovato;
+use Alura\Arquitetura\Gameficacao\Infra\Selo\RepositorioDeSeloEmMemoria;
 
 require_once 'vendor/autoload.php';
 
@@ -22,6 +23,7 @@ $numero = $argv[5];
 
 $publicador = new PublicadorDeEvento();
 $publicador->adicionarOuvinte(new LogDeAlunoMatriculado());
+$publicador->adicionarOuvinte(new GeraSeloDeNovato(new RepositorioDeSeloEmMemoria()));
 $useCase = new MatricularAluno(new RepositorioDeAlunoEmMemoria(), $publicador);
 $useCase->executa(new MatricularAlunoDto($cpf, $nome, $email));
 
