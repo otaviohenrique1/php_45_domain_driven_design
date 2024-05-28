@@ -2,9 +2,9 @@
 
 namespace Alura\Arquitetura\Testes\Dominio\Aluno;
 
-use Alura\Arquitetura\Dominio\Aluno\Aluno;
-use Alura\Arquitetura\Dominio\CPF;
-use Alura\Arquitetura\Dominio\Email;
+use Alura\Arquitetura\Academico\Dominio\Aluno\Aluno;
+use Alura\Arquitetura\Shared\Dominio\CPF;
+use Alura\Arquitetura\Academico\Dominio\Email;
 use DomainException;
 use PHPUnit\Framework\TestCase;
 

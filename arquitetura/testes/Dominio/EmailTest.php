@@ -2,7 +2,7 @@
 
 namespace Alura\Arquitetura\Testes\Dominio;
 
-use Alura\Arquitetura\Dominio\Email;
+use Alura\Arquitetura\Academico\Dominio\Email;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 

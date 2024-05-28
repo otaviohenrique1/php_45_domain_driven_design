@@ -2,7 +2,7 @@
 
 namespace Alura\Arquitetura\Testes\Dominio;
 
-use Alura\Arquitetura\Dominio\CPF;
+use Alura\Arquitetura\Shared\Dominio\CPF;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
