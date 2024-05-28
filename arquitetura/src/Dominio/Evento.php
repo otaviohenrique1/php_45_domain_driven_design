@@ -6,5 +6,5 @@ use DateTimeImmutable;
 
 interface Evento
 {
-  public function mommento(): DateTimeImmutable;
+  public function momento(): DateTimeImmutable;
 }

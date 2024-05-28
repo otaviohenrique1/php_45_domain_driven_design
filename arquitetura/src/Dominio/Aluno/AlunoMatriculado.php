@@ -21,7 +21,7 @@ class AlunoMatriculado implements Evento
     return $this->cpfAluno;
   }
 
-  public function mommento(): DateTimeImmutable
+  public function momento(): DateTimeImmutable
   {
     return $this->momento;
   }
